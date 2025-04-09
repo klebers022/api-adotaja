@@ -24,9 +24,9 @@ def cadastrar_pet():
 def obter_pets():
     try:
         pets = listar_pets()
-        return jsonify({"status": "sucesso", "data": pets}), 200
+        return jsonify({"status": 200, "data": pets}), 200
     except Exception as e:
         return jsonify({"status": "erro", "mensagem": f"Erro ao listar pets: {str(e)}"}), 500
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=True, host='0.0.0.0', port=5000)
