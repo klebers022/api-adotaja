@@ -21,6 +21,7 @@ def inserir_pet(pet: dict):
             with conexao.cursor() as cur:
                 cur.execute(sql, pet)
             conexao.commit()
+            print(pet)
         except Exception as e:
             print(f"Erro ao inserir pet: {e}")
         finally:

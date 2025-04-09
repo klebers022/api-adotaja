@@ -9,7 +9,7 @@ CORS(app)
 def cadastrar_pet():
     try:
         dados = request.json
-        campos_obrigatorios = ["nome", "porte", "idade", "tipo", "localizacao"]
+        campos_obrigatorios = ["nome", "porte", "idade", "tipo", "localizacao", "imagem"]
         
         for campo in campos_obrigatorios:
             if not dados.get(campo):
